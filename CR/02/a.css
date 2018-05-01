@@ -1,0 +1,153 @@
+body{
+    margin: 0px;
+    text-align: center;
+    background-image: url("images/bg.png");
+}
+.top{
+    margin-top: 50px;
+}
+.one{
+    /* color: tomato; */
+    color: #E6A756;
+    font-size: 24px;
+}
+.two{
+    color: white;
+    font-size: 32px;
+    font-family: Raleway;
+}
+.banner{
+    width: 100%;
+    height: 60px;
+    background-color: #2E160E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+ul{
+   list-style: none;
+   height: 60px;
+   /* margin: 100px auto; */
+}
+
+li{
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 12px;
+    float: left;
+    text-align: center;
+}
+.ex a{
+    color:  #E6A756;
+}
+.ex a:hover{
+    color:  #E6A756;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li a:hover{
+    opacity: 0.6;
+}
+.celarfix{
+    zoom: 1;
+}
+.celarfix::after{
+    height: 0;
+    display: table;
+    clear: both;
+    content: none;
+    visibility: hidden;
+}
+.content{
+    margin: 100px auto;
+    height: 400px;
+    position: relative;
+    box-sizing: border-box;
+}
+.content img{
+    max-height: 400px;
+    max-width: 36%;
+    margin-right: 20%;
+    float: right;
+}
+.text{
+    position: relative;
+    background: white;
+    max-width: 32%;
+    max-height: 500px;
+    opacity: 0.7;
+    left: 25%;
+    top: 50px;
+    padding: 10px;
+}
+.text .teo{
+    /* margin-top:10px;  */
+    color: black;
+    font-weight: bold;
+    text-align: 18px;
+}
+.text .tet{
+    font-size: 24px;
+}
+.text .teh{
+    font-size: 12px;
+}
+.but{
+    background: #D4984E;
+    font-size: 14px;
+     max-width:130px ;
+     height:40px ; 
+     padding: 20px auto;
+     position: relative;
+     left:36%;
+     top:35px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.but:hover{
+     background: rgb(206, 139, 57);
+    
+}
+.bottom{
+    height: 400px;
+    width: 100%;
+    background:  #D4984E;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contener{
+    background: white;
+    width: 40%;
+    opacity: 0.8;
+    padding: 20px;
+
+}
+
+.contener .o{
+    font-size: 16px;
+    font-weight: bold;
+}
+.contener .t{
+    font-size: 32px;
+}
+.contener .h{
+    opacity: 0.8;
+
+}
+.last{
+    width: 100%;
+    height:80px;
+    background: #381C15;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CR--响应式布局</title>
+    <!-- <link media="(min-width:500px)" href="a.css" rel="stylesheet" />
+		<link media="(max-width:500px)" href="c.css" rel="stylesheet" />
+		<link href="a.css" rel="stylesheet"> -->
+    <style>
+    @media only screen and (min-width: 1050px) and (max-width: 2440px){
+
+    body{
+    /* background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)),url(images/bg.jpg); */
+    background: linear-gradient(rgba(47,23,15,.65),rgba(47,23,15,.65)),url(images/bg.jpg) no-repeat 0 0;
+    margin: 0px;
+    text-align: center;
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.top{
+    margin-top: 50px;
+}
+.one{
+    /* color: tomato; */
+    color: #E6A756;
+    font-size: 24px;
+}
+.two{
+    color: white;
+    font-size: 32px;
+    font-family: Raleway;
+}
+.banner{
+    width: 100%;
+    height: 60px;
+    background-color: #2E160E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+ul{
+   list-style: none;
+   height: 60px;
+   /* margin: 100px auto; */
+}
+
+li{
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 12px;
+    float: left;
+    text-align: center;
+}
+.ex a{
+    color:  #E6A756;
+}
+.ex a:hover{
+    color:  #E6A756;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li a:hover{
+    opacity: 0.6;
+}
+.celarfix{
+    zoom: 1;
+}
+.celarfix::after{
+    height: 0;
+    display: table;
+    clear: both;
+    content: none;
+    visibility: hidden;
+}
+.content{
+    margin: 100px auto;
+    height: 400px;
+    position: relative;
+    box-sizing: border-box;
+}
+.content img{
+    max-height: 400px;
+    max-width: 36%;
+    margin-right: 20%;
+    float: right;
+}
+.text{
+    position: relative;
+    background: white;
+    max-width: 32%;
+    max-height: 500px;
+    opacity: 0.9;
+    left: 25%;
+    top: 50px;
+    padding: 10px;
+}
+.text .teo{
+    /* margin-top:10px;  */
+    color: black;
+    font-weight: bold;
+    text-align: 18px;
+}
+.text .tet{
+    font-size: 24px;
+}
+.text .teh{
+    font-size: 12px;
+}
+.but{
+    opacity: 1.0;
+    background: #D4984E;
+    font-size: 14px;
+     max-width:130px ;
+     height:40px ; 
+     padding: 20px auto;
+     position: relative;
+     left:36%;
+     top:35px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.but:hover{
+     background: rgb(206, 139, 57);
+    
+}
+.bottom{
+    height: 400px;
+    width: 100%;
+    background:  #D4984E;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cont
+{   
+    height: 350px;
+    width: 45%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contener{
+    height: 280px;
+    background: white;
+    /* width: 40%; */
+    width:89%;
+    opacity: 0.8;
+    padding: 20px;
+    border-style: solid;
+    border-width: 6px;
+    border-color: #D4984E;
+    
+}
+
+.contener .o{
+    font-size: 16px;
+    font-weight: bold;
+}
+.contener .t{
+    font-size: 32px;
+}
+.contener .h{
+    opacity: 0.8;
+
+}
+.last{
+    width: 100%;
+    height:80px;
+    background: #381C15;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+    }
+    @media only screen and (min-width: 320px) and (max-width: 1050px){
+        body{
+            /* background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)),url(images/bg.jpg); */
+        /* margin: 0px;
+        text-align: center;
+        background-image: url("images/bg.jpg");
+        background-size: cover;
+        background-attachment: fixed; */
+        
+				background: linear-gradient(rgba(47,23,15,.65),rgba(47,23,15,.65)),url(images/bg.jpg) no-repeat 0 0;
+                background-attachment: fixed;
+                background-position: center;
+                background-size: cover;
+                /* width: 1200px;
+                height:1000px; */
+                margin: 0 auto ;
+                text-align: center;
+                padding:0;
+                width: 100%;
+    }
+    .top{
+        margin-top: 30px;
+    }
+    .one{
+        /* color: tomato; */
+        color: #E6A756;
+        font-size: 18px;
+    }
+    .two{
+        color: white;
+        font-size: 22px;
+        font-family: Raleway;
+    }
+    .banner{
+        width: 100%;
+        height: 50px;
+        background-color: #2E160E;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+    ul{
+        width: 100%;
+   list-style: none;
+   height: 60px;
+   /* margin: 100px auto; */
+}
+
+li{
+    width: 25%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 4px;
+    float: left;
+    text-align: center;
+}
+.ex a{
+    color:  #E6A756;
+}
+.ex a:hover{
+    color:  #E6A756;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li a:hover{
+    opacity: 0.6;
+}
+.celarfix{
+    zoom: 1;
+}
+.celarfix::after{
+    height: 0;
+    display: table;
+    clear: both;
+    content: none;
+    visibility: hidden;
+}
+.content{
+    margin: 30px auto;
+    height: 320px;
+    position: relative;
+    box-sizing: border-box;
+}
+.content img{
+    height: 280px;
+    width: 60%;
+    margin-right: 10%;
+    float: right;
+}
+
+.text{
+    position: relative;
+    background: white;
+    max-width: 40%;
+    max-height: 300px;
+    opacity: 0.8;
+    left: 10%;
+    top: 50px;
+    word-break: keep-all;
+    padding: 5px;
+    display: flex;
+    justify-content:center;
+}
+/* .text span{
+    width: 98%;
+    margin: 0 auto;
+} */
+.text .teo{
+    /* margin-top:10px;  */
+    color: black;
+    font-weight: bold;
+    font-size: 10px;
+}
+.text .tet{
+    font-size: 12px;
+}
+.text .teh{
+    font-size: 8px;
+}
+
+.text .but{
+    background: #D4984E;
+    font-size: 10px;
+     max-width:100px ;
+     height:12% ; 
+     line-height: 17px;
+     padding: 10px auto;
+     margin:0 auto;
+}
+.but:hover{
+     background: rgb(206, 139, 57);
+    
+}
+
+
+.bottom{
+    height: 350px;
+    width: 100%;
+    background:  #D4984E;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont
+{   
+    height: 300px;
+    width: 80%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contener{
+    height: 250px;
+    background: white;
+    /* width: 40%; */
+    width:85%;
+    opacity: 0.8;
+    padding: 10px;
+    border-style: solid;
+    border-width: 8 px;
+    border-color: #D4984E;
+    
+}
+
+.contener .o{
+    font-size: 8px;
+    font-weight: bold;
+}
+.contener .t{
+    font-size: 12px;
+}
+.contener .h{
+    opacity: 0.8;
+    font-size: 8px;
+
+}
+.last{
+    width: 100%;
+    height:50px;
+    background: #381C15;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6px;
+}
+
+    }
+    
+    
+    
+    </style>
+
+</head>
+<body>
+    <div class="top">
+    <p class="one">A FREE BOOTSTRAP 4 BUSINESS THEME</p>
+    <P class="two">BUSINESS CASUAL</P>
+    </div>
+    <div class="banner">
+        <ul>
+            <li class="ex"><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="#">STORE</a></li>
+        </ul>
+    </div>
+    <div class="page clearfix">
+    <div class="content">
+        <img src="images/intro.png">
+        
+        <div class="text">
+           <span> <p class="teo">FRESH COFFEE</p>
+            <p class="tet">WORTH &nbsp;DRINKING</p>
+            <p class="teh"> Once you try it, our coffee will be a blissful addition 
+                to your everyday morning routine - we guarantee it!</p>
+                <div class="but"><a href="#">Visit Us Today!</a></div></span>
+        </div>
+   
+    </div>
+</div>
+<div class="bottom">
+    <div class="cont">
+    <div class="contener">
+    
+    <p class="o">OUR PROMISE</p>
+    <p class="t">TO YOU</p>
+    <p class="h">When you walk into our shop to start your day, you with friendly service, a welcoming atmosphere, and above all else, excellent products made with the highest quality ingredients. If you are not satisfied, please let us know and we will do whatever we can to make things right!</p>
+    
+</div>
+</div>
+</div>
+<div class="last">Copyright © Your Website 2018</div>
+</body>
+</html>

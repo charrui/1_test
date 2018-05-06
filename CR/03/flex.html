@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CR--flex</title>
+    <style>
+    .whole{
+        width: 100%;
+        height: 600px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+    .left{
+        background-color: chocolate;
+        flex: 1;
+     
+        border: solid 1px brown;
+    }
+    .main{
+        width: 600px;
+        background-color: coral;
+        
+        border: solid 1px brown;
+    }
+    .right{
+        background-color: cornflowerblue;
+        flex: 2;
+        border: solid 1px brown;
+        
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <div class="whole">
+        <div class="left">左</div>
+        <div class="main">中</div>
+        <div class="right">右</div>
+    </div>
+</body>
+</html>

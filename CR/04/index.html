@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CR-表单</title>
+    <!-- css样式 -->
+    <style>
+    .bd{
+        width: 300px;
+        height: auto;
+        /* background: bisque; */
+        border: 1px #333 solid;
+        border-bottom-color: white;
+        position: absolute;
+        left: 50%;
+        top:50px;
+        margin-left:-150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+    #msg{
+        color: rgb(58, 59, 2);
+       background: rgb(251, 255, 6);
+        
+    } 
+    
+    
+    
+    
+    </style>
+
+    <!-- js开始 -->
+    <script type="text/javascript">
+         var xmlHttp;
+    function createxmlHttpRequest() {
+      if (window.ActiveXObject) {
+        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+      } else if (window.XMLHttpRequest) {
+        xmlHttp = new XMLHttpRequest();
+      }
+    }
+    function doGet(url) {
+      createxmlHttpRequest();
+      var msg = document.getElementById("msg");
+      xmlHttp.open("GET", url);
+      xmlHttp.send(null);
+      xmlHttp.onreadystatechange = function () {
+        if ((xmlHttp.readyState == 4) && (xmlHttp.status == 200)) {
+          msg.innerHTML = JSON.parse(xmlHttp.responseText).message;
+          msg.setAttribute("class", "show");
+        }
+      }
+    }
+
+        function CheckPost() {
+      //这里写一些基本的验证代码
+      if(myform.pwd.value=="")
+      {
+          alert("请输入密码");
+          myform.pwd.focus();
+          return false;
+      }
+      if(myform.bz.value=="")
+      {
+          alert("请输入备注");
+          myform.pwd.focus();
+          return false;
+      }
+     
+       document.write("姓名："+document.myform.username.value+"<br>"+"密码："+document.myform.pwd.value+"<br/>"+"性别："+document.myform.sex.value+"<br>籍贯："+document.myform.jg.value+"<br/>备注："+document.myform.bz.value);
+      return false;
+
+        }
+
+
+        function checkuser() {
+      var url = "http://www.1ke.co/backend/teach/js/checkuser.php";
+      url += "?username=" + myform.username.value;
+      doGet(url);
+    }
+
+
+
+ 
+    
+        </script>
+</head>
+
+
+<body>
+    <div class="bd">
+         个人信息注册
+        <form name="myform" onsubmit="CheckPost()">
+        <label for="txt_username">姓&nbsp;&nbsp;名：</label>
+        <input type="text" name="username" placeholder="Username" onblur="checkuser()">
+        <br>
+        <div id="msg"></div>
+        <label for="txt_pwd">密&nbsp;&nbsp;码：</label>
+        <input type="password" placeholder="password" name="pwd" /><br>
+        <!-- <label for="txt_pwd">确&nbsp;&nbsp;认<br>密&nbsp;&nbsp;码：</label>
+        <input type="password" placeholder="rewrite password" name="pwd" />
+        <br> -->
+        性&nbsp;&nbsp;别：
+        男<input name="sex" type="radio" value="男" checked>
+        女<input name="sex" type="radio" value="女" >
+        <br>
+        爱&nbsp;&nbsp;好：
+        <input type="checkbox" name="ah1" value="读书">读书
+        <input type="checkbox" name="ah2" value="唱歌">唱歌
+        <input type="checkbox" name="ah3" value="篮球">篮球
+        <input type="checkbox" name="ah4" value="跳舞">跳舞
+        <br>
+        籍&nbsp;&nbsp;贯：
+        <select name="jg">
+            <option value="安徽" selected>安徽</option>
+            <option value="江苏">江苏</option>
+            <option value="山西">山西</option>
+            <option value="河南">河南</option>
+        </select>
+        <br>
+        备&nbsp;&nbsp;注：
+        <textarea name="bz" placeholder="我想说····" rows="3" cols="30"></textarea>
+        <br>
+        <input type="submit" value="登录"/>
+        <input type="reset" value="重置">
+      
+        
+    </form>
+</div>
+</body>
+</html>
